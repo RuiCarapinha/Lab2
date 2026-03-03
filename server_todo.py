@@ -8,7 +8,7 @@ class TodoItem:
         self.description = description
         self.completed = False
 
-    def completed(self)
+    def completed(self):
         self.completed = True
 
 
