@@ -11,7 +11,6 @@ class TodoItem:
     def completed(self):
         self.completed = True
 #teste
-#teste 2
 
 # This class represents a list of TodoItems
 class TodoList:
