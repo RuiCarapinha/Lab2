@@ -17,6 +17,6 @@ def join_binary_files(file1, file2, output_file):
 # copy_binary_file('input.bin', 'output.bin', 0, 30) # Copy bytes 0-30 to output.bin
 # copy_binary_file('input.bin', 'output.bin', 54) # Copy bytes 54 to the end to output.bin
 
-copy_binary_file('c-academy.bmp', 'head', 0, 54)
-copy_binary_file('c-academy.bmp', 'body', 55)
-join_binary_files('head', 'body', 'c-academy-original.bmp')
+#copy_binary_file('c-academy.bmp', 'head', 0, 54)
+#copy_binary_file('c-academy.bmp', 'body', 55)
+join_binary_files('head', 'body_cbc.enc', 'c-academy_cbc.bmp')
