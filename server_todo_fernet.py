@@ -18,6 +18,11 @@ class TodoList:
         item = TodoItem(title, description)
         self.items.append(item)
 
+    def add_item2(self, title, description, comp):
+        item = TodoItem(title, description)
+        item = item.completed=comp
+        self.items.append(item)
+
     def complete_item(self, index):
         if (index < 0 or index >= len(self.items)):
             raise IndexError("Invalid index")
@@ -64,7 +69,8 @@ try:
             plain_item = cipher.decrypt(c_item.encode()).decode()
             print("decrypted: ", plain_item)
             title, description, completed = plain_item.split(",")
-            todo_list.add_item(title, description)
+            #todo_list.add_item(title, description)
+            todo_list.add_item2(title, description,completed)
 except FileNotFoundError:
     todo_list = TodoList()
 

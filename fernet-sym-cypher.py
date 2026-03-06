@@ -4,6 +4,10 @@ key = Fernet.generate_key()
 # the key is type bytes
 print("key: ", key)
 
+
+with open("key.fernet", "w") as file:
+                file.write(str(key))
+
 f = Fernet(key)
 # encrypt the message
 token = f.encrypt(b"my deep dark secret")
