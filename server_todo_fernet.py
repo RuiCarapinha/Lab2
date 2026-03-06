@@ -1,6 +1,7 @@
 import json
 import socket
 from cryptography.fernet import Fernet
+import base64
 
 # This class represents a single todo item
 class TodoItem:
@@ -20,7 +21,7 @@ class TodoList:
 
     def add_item2(self, title, description, comp):
         item = TodoItem(title, description)
-        item = item.completed=comp
+        item.completed = comp
         self.items.append(item)
 
     def complete_item(self, index):
@@ -50,7 +51,7 @@ class TodoList:
         return result
 
 host = 'localhost'
-port = 8888
+port = 24000
 
 # load key
 with open('key.fernet', 'rb') as key_file:

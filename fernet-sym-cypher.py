@@ -5,8 +5,8 @@ key = Fernet.generate_key()
 print("key: ", key)
 
 
-with open("key.fernet", "w") as file:
-                file.write(str(key))
+with open("key.fernet", "wb") as file:
+                file.write(key)
 
 f = Fernet(key)
 # encrypt the message
